@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+         <!-- <label for="checkbox">Dark Theme</label>  <input type="checkbox" name="" id="" onclick=""> -->
+    <div class="calculator-container">
+     
+        <div class="calculator-results" id="result">
+
+        </div>
+        <div class="calculator-buttons">
+            <button id="%" onclick="placeItem(this)">%</button>
+            <button id="clearAll" >CE</button>
+            <button id="Clear" onclick="clearAll()">C</button>
+            <button id="remove" onclick="removeItem()">Backspace</button>
+            <button id="fraction">1/x</button>
+            <button id="^" onclick="placeItem(this)">x^2</button>
+            <button id="sqrt">sqrt</button>
+            <button id="div" onclick="placeItem(this)">/</button>
+            <button id="7" onclick="placeItem(this)">7</button>
+            <button id="8"  onclick="placeItem(this)">8</button>
+            <button id="9"  onclick="placeItem(this)">9</button>
+            <button id="mult"  onclick="placeItem(this)">x</button>
+            <button id="4"  onclick="placeItem(this)">4</button>
+            <button id="5"  onclick="placeItem(this)">5</button>
+            <button id="6"  onclick="placeItem(this)">6</button>
+            <button id="min"  onclick="placeItem(this)">-</button>
+            <button id="1"  onclick="placeItem(this)">1</button>
+            <button id="2"  onclick="placeItem(this)">2</button>
+            <button id="3"  onclick="placeItem(this)">3</button>
+            <button id="sum" onclick="placeItem(this)" >+</button>
+            <button>+/-</button>
+            <button id="0"  onclick="placeItem(this)">0</button>
+            <button id="decimal">.</button>
+            <button id="equals" onclick="finalResult()">=</button>
+        </div>
+    </div>
+</div>
+<script src="calculator.js"></script>
+</body>
+</html>
