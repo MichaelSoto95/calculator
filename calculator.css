@@ -25,6 +25,7 @@
 }
 .calculator-results{
     display: flex;
+    flex-wrap: wrap;
     align-items: end;
     justify-content: end;
    color: azure;
