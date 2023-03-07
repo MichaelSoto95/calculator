@@ -3,12 +3,29 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+:root{
+/* --resColor: rgb(68, 137, 137);
+--buttonColor:rgb(63, 105, 105);
+--equalsColor: rgb(3, 148, 148); */
+--fontColor: #c1eeff;
+--resColor: #4bb4de;
+--buttonColor:#345da7;
+--equalsColor:#3b8ac4;
+--background:#efdbcb;
+--theme:#fff;
+/* black */
+
+}
+
+
+
 .calculator{
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color:var(--theme);
     height: 800px;
+  
 
 }
 .calculator-container{
@@ -16,28 +33,31 @@
     flex-direction:column ;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: var(--background);
     border: solid 1px black;
     width: 550px;
     height: 700px;
     border-radius: 5px;
  position: relative;
+ /* transform: scale(.7); */
+
 }
 .calculator-results{
     display: flex;
     flex-wrap: wrap;
     align-items: end;
     justify-content: end;
-   color: azure;
+   color: var(--fontColor);
     border: solid 1px black;
     border-radius: 5px;
     min-height: 300px;
-    width: 500px;
-    background-color: rgb(68, 137, 137);
+   width: 500px;
+    background-color:var(--resColor);
     font-size: 75px;
 }
 .calculator-results h1{
-    font-size: 70px;
+  font-size: 50px;
+  max-width: 490px;
 }
 .calculator-buttons{
     display: grid;
@@ -51,20 +71,62 @@
     width: 500px;
     height: 350px;
  
+ 
 }
 .calculator-buttons button{
     width: 100%;
     height: 100%;
     cursor: pointer;
     font-weight: 600;
-    background-color: rgb(63, 105, 105);
-    color: azure;
+    background-color: var(--buttonColor);
+    color: var(--fontColor);
     border-radius: 3px;
     font-size: 25px;
+
 }
 .calculator-buttons button:hover{
-  background-color: rgb(88, 172, 172);;
+  background-color:var(--buttonColor);
+  opacity: .5;
 }
 #equals{
-    background-color: rgb(3, 148, 148);;
+   background-color: var(--equalsColor);
 }
+.theme-container{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--fontColor);
+    text-align: center;
+background-color: var(--buttonColor);
+padding: 10px;
+gap: 5px;
+
+}
+.theme-conatainer label{
+    cursor: pointer;
+	color: #fff;
+	padding: 10px;
+	margin: 3px;
+
+}
+input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+
+
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+   /* // box-shadow: inset 1em 1em var(--form-control-color); */
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }

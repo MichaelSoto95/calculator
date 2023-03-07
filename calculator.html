@@ -8,8 +8,11 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div class="theme-container">
+        <label for="radio">Theme:</label>
+         <input type="checkbox" name="" id="check-box">
+        </div> 
     <div class="calculator">
-         <!-- <label for="checkbox">Dark Theme</label>  <input type="checkbox" name="" id="" onclick=""> -->
     <div class="calculator-container">
      
         <div class="calculator-results" id="result">
@@ -21,8 +24,8 @@
             <button id="Clear" onclick="clearAll()">C</button>
             <button id="remove" onclick="removeItem()">Backspace</button>
             <button id="fraction">1/x</button>
-            <button id="^" onclick="placeOperator(this)">x^2</button>
-            <button id="sqrt" onclick="placeOperator(this)">sqrt</button>
+            <button id="exponent" onclick="placeOperator(this)">x^2</button>
+            <button id="sqrt" onclick="sqrt(this)">sqrt</button>
             <button id="div" onclick="placeOperator(this)">/</button>
             <button id="7" onclick="placeItem(this)">7</button>
             <button id="8"  onclick="placeItem(this)">8</button>
@@ -38,7 +41,7 @@
             <button id="sum" onclick="placeOperator(this)" >+</button>
             <button>+/-</button>
             <button id="0"  onclick="placeItem(this)">0</button>
-            <button id="decimal">.</button>
+            <button id="." onclick="placeItem(this)">.</button>
             <button id="equals" onclick="finalResult()">=</button>
         </div>
     </div>
